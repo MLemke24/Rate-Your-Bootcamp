@@ -6,7 +6,7 @@
 
 Interactive Full-Stack Project
 
-Rate Your Bootcamp is a website that provides ratings and reviews of Web Development Bootcamps. Users can login, access a user dashboard that store's their Reviews and Resume. The website has a feature for employers to seek Bootcamp Graduates to hire.
+Rate Your Bootcamp is a website that provides ratings and reviews of Web Development Bootcamps. Users can login and access a dashboard that store's their Reviews and Resume. The website has a feature for employers to seek Bootcamp Graduates to hire.
 
 ## Table of Contents
 
