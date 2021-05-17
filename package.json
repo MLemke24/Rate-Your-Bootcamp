@@ -1,0 +1,27 @@
+{
+  "name": "Rate-Your-Bootcamp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MLemke24/Rate-Your-Bootcamp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MLemke24/Rate-Your-Bootcamp/issues"
+  },
+  "homepage": "https://github.com/MLemke24/Rate-Your-Bootcamp#readme",
+  "dependencies": {
+    "dotenv": "^9.0.2",
+    "express": "^4.17.1",
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.6.2"
+  }
+}
