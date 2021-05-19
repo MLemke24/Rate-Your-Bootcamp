@@ -22,7 +22,11 @@ Rate Your Bootcamp is a website that provides ratings and reviews of Web Develop
 
 ## Installation
 
-[Installation instructions to Install MySQL](https://dev.mysql.com/doc/mysql-installation-excerpt/8.0/en/windows-install-archive.html)
+Install MySQL
+
+```bash
+npm install mysql
+```
 
 Install Sequelize 
 
