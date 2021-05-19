@@ -1,4 +1,4 @@
- # Rate Your Bootcamp Website 
+# Rate Your Bootcamp Website 
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
@@ -22,11 +22,7 @@ Rate Your Bootcamp is a website that provides ratings and reviews of Web Develop
 
 ## Installation
 
-Install MySQL
-
-```bash
-npm install mysql
-```
+[Installation instructions to Install MySQL](https://dev.mysql.com/doc/mysql-installation-excerpt/8.0/en/windows-install-archive.html)
 
 Install Sequelize 
 
@@ -84,10 +80,10 @@ Deployed to [Heroku](https://id.heroku.com/login)
  
 You can submit any questions by emailing a team member.
 
-Matthew Lemke: <a href="mailto:matthewlemke@gmail.com?"><img src="https://img.shields.io/badge/gmail-%23DD0031.svg?&style=for-the-badge&logo=gmail&logoColor=white"/></a>
+<a href="mailto:matthewlemke@gmail.com?"><img src="https://img.shields.io/badge/gmail-%23DD0031.svg?&style=for-the-badge&logo=gmail&logoColor=white"/></a>
 
-Nancy Rosas: <a href="mailto:nancyrosas0@gmail.com?"><img src="https://img.shields.io/badge/gmail-%23DD0031.svg?&style=for-the-badge&logo=gmail&logoColor=white"/></a>
+<a href="mailto:nancyrosas0@gmail.com?"><img src="https://img.shields.io/badge/gmail-%23DD0031.svg?&style=for-the-badge&logo=gmail&logoColor=white"/></a>
 
-Arthur Bates: <a href="mailto:arthurbatesdev@gmail.com?"><img src="https://img.shields.io/badge/gmail-%23DD0031.svg?&style=for-the-badge&logo=gmail&logoColor=white"/></a>
+<a href="mailto:arthurbatesdev@gmail.com?"><img src="https://img.shields.io/badge/gmail-%23DD0031.svg?&style=for-the-badge&logo=gmail&logoColor=white"/></a>
 
-Dakota Nelson <a href="mailto:kotalilyy@gmail.com?"><img src="https://img.shields.io/badge/gmail-%23DD0031.svg?&style=for-the-badge&logo=gmail&logoColor=white"/></a>  
+<a href="mailto:kotalilyy@gmail.com?"><img src="https://img.shields.io/badge/gmail-%23DD0031.svg?&style=for-the-badge&logo=gmail&logoColor=white"/></a> 

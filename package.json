@@ -1,19 +1,27 @@
 {
   "name": "rate-your-bootcamp",
   "version": "1.0.0",
-  "description": "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)",
-  "main": "index.js",
+  "description": "",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/MLemke24/Rate-Your-Bootcamp.git"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/MLemke24/Rate-Your-Bootcamp/issues"
   },
-  "homepage": "https://github.com/MLemke24/Rate-Your-Bootcamp#readme"
+  "homepage": "https://github.com/MLemke24/Rate-Your-Bootcamp#readme",
+  "dependencies": {
+    "dotenv": "^9.0.2",
+    "express": "^4.17.1",
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.6.2"
+  }
 }
