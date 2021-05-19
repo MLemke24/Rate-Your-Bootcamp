@@ -1,7 +1,7 @@
 {
   "name": "rate-your-bootcamp",
   "version": "1.0.0",
-  "description": "",
+  "description": "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)",
   "main": "server.js",
   "scripts": {
     "test": "jest",
@@ -23,5 +23,6 @@
     "express": "^4.17.1",
     "mysql2": "^2.2.5",
     "sequelize": "^6.6.2"
-  }
+  },
+  "devDependencies": {}
 }
