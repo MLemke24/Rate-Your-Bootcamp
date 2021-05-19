@@ -20,11 +20,11 @@ Comment.init(
                 len: [1]
             }
         },
-        user_id: {
-            type: DataTypes.INTEGER,
+        username: {
+            type: DataTypes.STRING,
             references: {
                 model: 'user',
-                key: 'id'
+                key: 'username'
             }
         },
         post_id: {
