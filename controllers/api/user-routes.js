@@ -24,7 +24,7 @@ router.get('/:id', (req, res) => {
       include: [
         {
           model: Post,
-          attributes: ['id', 'title', 'post_url', 'created_at']
+          attributes: ['id', 'title', 'bootcampName', 'deliverFormat', 'length', 'status', 'price', 'quality', 'standardsMet', 'repeat', 'overallRating', 'review_comments', 'user_id']
         },
         {
           model: Comment,
@@ -35,7 +35,6 @@ router.get('/:id', (req, res) => {
           }
         }
       ]
-    })
     })
       .then(dbUserData => {
         if (!dbUserData) {
