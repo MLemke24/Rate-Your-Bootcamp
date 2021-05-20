@@ -55,4 +55,27 @@ router.get('/:id', (req, res) => {
       });
   });
 
+// POST api/users
+router.post('/', (req, res) => {
+    User.create({
+        username: req.body.username,
+        email: req.body.email,
+        password: req.body.password
+      })
+      .then(dbUserData => {
+        console.log(dbUserData.username)
+        req.session.save(() => {
+          req.session.user_id = dbUserData.id;
+          req.session.username = dbUserData.username;
+          req.session.loggedIn = true;
+    
+          res.json(dbUserData);
+        });
+      })
+      .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+      });
+    });
+
   module.exports = router;
