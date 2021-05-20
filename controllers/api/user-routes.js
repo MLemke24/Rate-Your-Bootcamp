@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User }  = require('../../models');
+const { User, Post, Comment }  = require('../../models');
 
 // GET /api/users
 router.get('/', (req, res) => {
@@ -24,7 +24,8 @@ router.get('/:id', (req, res) => {
       include: [
         {
           model: Post,
-          attributes: ['id', 'title', 'post_url', 'created_at']
+          attributes: ['id', 'title', 'bootcampName', 'deliverFormat', 'length', 
+        'status', 'price', 'quality', 'standardsMet', 'repeat', 'overallRating', 'review_comments', 'user_id'],
         },
         {
           model: Comment,
@@ -34,12 +35,6 @@ router.get('/:id', (req, res) => {
           attributes: ['title']
       }
         },
-        {
-          model: Post,
-          attributes: ['title'],
-          through: Vote,
-          as: 'voted_posts'
-        }
       ]
     })
       .then(dbUserData => {
@@ -63,14 +58,14 @@ router.post('/', (req, res) => {
         password: req.body.password
       })
       .then(dbUserData => {
-        console.log(dbUserData.username)
-        req.session.save(() => {
-          req.session.user_id = dbUserData.id;
-          req.session.username = dbUserData.username;
-          req.session.loggedIn = true;
+        // req.session.save(() => {
+        //   req.session.user_id = dbUserData.id;
+        //   req.session.username = dbUserData.username;
+        //   req.session.loggedIn = true;
     
-          res.json(dbUserData);
-        });
+        //
+        // });
+        res.json(dbUserData);
       })
       .catch(err => {
         console.log(err);
