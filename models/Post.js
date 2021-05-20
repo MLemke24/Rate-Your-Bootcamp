@@ -17,11 +17,11 @@ Post.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    bootcamp_name: {
+    bootcampName: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    deliver_format: {
+    deliverFormat: {
       type: DataTypes.BOOLEAN,
       allowNull: false,
     },
