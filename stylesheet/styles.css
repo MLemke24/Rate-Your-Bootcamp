@@ -1,8 +1,18 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 img.stretchy {
-  width: 100%; 
+  width: 100%;
   display: flex;
   justify-content: center;
 }
 .container {
-  width: 100%; 
+  background-color: black;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 0;
 }
