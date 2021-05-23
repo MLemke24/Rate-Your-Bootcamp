@@ -1,0 +1,67 @@
+<section>
+  <h2>Create New Post</h2>
+
+  <form class="new-post-form">
+    <div>
+      <label for="post-title">Review Title</label>
+      <input type="text" id="post-title" name="post-title" />
+    </div>
+    <div>
+      <label for="post-bootcampName">Bootcamp Name</label>
+      <input id="post-bootcampName" name="post-bootcampName" />
+    </div>
+    <div>
+      <label for="post-deliveryFormat">Delivery Format: In-Person, Online, or Hybrid</label>
+      <input id="post-deliveryFormat" name="post-deliveryFormat" />
+    </div>
+    <div>
+      <label for="post-length">How many weeks was your Bootcamp?</label>
+      <input id="post-length" name="post-length" />
+    </div>
+        <div>
+      <label for="post-status">Full Time or Part Time</label>
+      <input id="post-status" name="post-status" />
+    </div>
+    <div>
+      <label for="post-price">Price</label>
+      <input id="post-price" name="post-price" />
+    </div>
+        <div>
+      <label for="post-quality">Quality</label>
+      <input id="post-quality" name="post-quality" />
+    </div>
+    <div>
+      <label for="post-standardsMet">Did it meet your expectations?</label>
+      <input id="post-standardsMet" name="post-standardsMet" />
+    </div>
+    <div>
+      <label for="post-repeat">Would you choose this Bootcamp again?</label>
+      <input id="post-repeat" name="post-repeat" />
+    </div>
+     <div>
+      <label for="post-overallRating">Overall rating</label>
+      <input id="post-overallRating" name="post-overallRating" />
+    </div>
+    <div>
+      <label for="post-review_comments">Additional Comments</label>
+      <input id="post-review_comments" name="post-review_comments" />
+    </div>
+    <button type="submit" class="btn">Create</button>
+  </form>
+</section>
+
+{{#if posts.length}}
+<section>
+  <h2>Your Posts</h2>
+  <ol>
+    {{#each posts as |post|}}
+    <li>
+      {{> post-info post}}
+      <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
+    </li>
+    {{/each}}
+  </ol>
+</section>
+{{/if}}
+
+<script src="/javascript/add-post.js"></script>

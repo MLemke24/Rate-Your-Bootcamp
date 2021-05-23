@@ -22,7 +22,7 @@ Post.init(
       allowNull: false,
     },
     deliverFormat: {
-      type: DataTypes.BOOLEAN,
+      type: DataTypes.STRING,
       allowNull: false,
     },
     length: {
@@ -30,7 +30,7 @@ Post.init(
       allowNull: false,
     },
     status: {
-      type: DataTypes.BOOLEAN,
+      type: DataTypes.INTEGER,
       allowNull: false,
     },
     price: {
