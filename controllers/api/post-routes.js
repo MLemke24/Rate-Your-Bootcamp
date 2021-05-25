@@ -2,14 +2,15 @@ const router = require('express').Router();
 const { Post, User, Comment } = require('../../models');
 
 router.get('/', (req, res) => {
+  console.log('end point being hit')
     Post.findAll({
         order: [[ 'created_at', 'DESC']],
-        attributes: ['id', 'title', 'bootcampName', 'deliverFormat', 'length', 
+        attributes: ['title', 'bootcampName', 'deliverFormat', 'length', 
         'status', 'price', 'quality', 'standardsMet', 'repeat', 'overallRating', 'review_comments', 'user_id'],
     include: [
         {
           model: Comment,
-          attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+          attributes: ['comment_text', 'post_id', 'user_id', 'created_at'],
           include: {
           model: User,
           attributes: ['username']
@@ -33,12 +34,12 @@ router.get('/:id', (req, res) => {
         where: {
             id: req.params.id
         },
-        attributes: ['id', 'title', 'bootcampName', 'deliverFormat', 'length', 
+        attributes: ['title', 'bootcampName', 'deliverFormat', 'length', 
         'status', 'price', 'quality', 'standardsMet', 'repeat', 'overallRating', 'review_comments', 'user_id'],
     include: [
         {
           model: Comment,
-          attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+          attributes: ['comment_text', 'post_id', 'user_id', 'created_at'],
           include: {
           model: User,
           attributes: ['username']
@@ -58,6 +59,7 @@ router.get('/:id', (req, res) => {
 });
 
 router.post('/', (req, res) => {
+  console.log(req.body);
     Post.create({
         title: req.body.title,
         bootcampName: req.body.bootcampName,

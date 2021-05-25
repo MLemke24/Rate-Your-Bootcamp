@@ -13,33 +13,35 @@ async function newFormHandler(event) {
     const post_overallRating = document.querySelector('input[name="post-overallRating"]').value;
     const post_review_comments = document.querySelector('input[name="post-review_comments"]').value;
   
+    console.log('adding post');
+
     const response = await fetch(`/api/posts`, {
       method: 'POST',
       body: JSON.stringify({
-        title,
-        post_bootcampName, 
-        post_deliveryFormat,
-        post_length,
-        post_status,
-        post_price,
-        post_quality,
-        post_standardsMet,
-        post_repeat,
-        post_overallRating,
-        post_review_comments
+        title: title,
+        bootcampName: post_bootcampName,
+        deliverFormat: post_deliveryFormat,
+        length: post_length,
+        status: post_status,
+        price: post_price ,
+        quality: post_quality,
+        standardsMet: true,
+        repeat: true,
+        overallRating: 6,
+        review_comments: post_review_comments,
+        user_id: 1
       }),
       headers: {
         'Content-Type': 'application/json'
       }
     });
   
-    if (response.ok) {
-      document.location.replace('/dashboard');
-    } else {
-      alert(response.statusText);
-    }
+    //if (response.ok) {
+      //document.location.replace('/dashboard');
+    //} else {
+      alert(response);
+    //}
   }
 
-  console.log(response);
   
   document.querySelector('.new-post-form').addEventListener('submit', newFormHandler);
