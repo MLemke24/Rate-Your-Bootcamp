@@ -7,7 +7,6 @@ router.use('/api', apiRoutes);
 
 router.use('/', viewRoutes);
 
-
 router.use((req, res) => {
   res.status(404).end();
 });
