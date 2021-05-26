@@ -1,5 +1,5 @@
-const router = require('express').Router();
-const { Post, User, Comment } = require('../../models');
+const router = require("express").Router();
+const { Post, User, Comment } = require("../../models");
 
 router.get('/', (req, res) => {
   console.log('end point being hit')
@@ -12,22 +12,24 @@ router.get('/', (req, res) => {
           model: Comment,
           attributes: ['comment_text', 'post_id', 'user_id', 'created_at'],
           include: {
+
           model: User,
-          attributes: ['username']
-          }
+          attributes: ["username"],
         },
-        {
-          model: User,
-          attributes: ['username']
-        }
-      ]
-    })
-      .then(dbPostData => res.json(dbPostData))
-      .catch(err => {
-        console.log(err);
-        res.status(500).json(err);
-      });
+      },
+      {
+        model: User,
+        attributes: ["username"],
+      },
+    ],
+  })
+    .then((dbPostData) => res.json(dbPostData))
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json(err);
+    });
 });
+
 
 router.get('/:id', (req, res) => {
     Post.findOne({
@@ -41,22 +43,24 @@ router.get('/:id', (req, res) => {
           model: Comment,
           attributes: ['comment_text', 'post_id', 'user_id', 'created_at'],
           include: {
+
           model: User,
-          attributes: ['username']
-          }
+          attributes: ["username"],
         },
-        {
-          model: User,
-          attributes: ['username']
-        }
-      ]
-    })
-      .then(dbPostData => res.json(dbPostData))
-      .catch(err => {
-        console.log(err);
-        res.status(500).json(err);
-      });
+      },
+      {
+        model: User,
+        attributes: ["username"],
+      },
+    ],
+  })
+    .then((dbPostData) => res.json(dbPostData))
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json(err);
+    });
 });
+
 
 router.post('/', (req, res) => {
   console.log(req.body);
@@ -76,10 +80,12 @@ router.post('/', (req, res) => {
     })
     .then(dbPostData => res.json(dbPostData))
     .catch(err => {
+
       console.log(err);
       res.status(500).json(err);
     });
-})
+});
+
 
 // Login
 router.post('/login', (req, res) =>{
@@ -177,3 +183,4 @@ router.delete('/:id', (req, res) => {
 })
 
 module.exports = router;
+
