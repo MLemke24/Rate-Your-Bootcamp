@@ -1,12 +1,13 @@
 {
-  "name": "Rate-Your-Bootcamp",
+  "name": "rate-your-bootcamp",
   "version": "1.0.0",
   "description": "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)",
   "main": "server.js",
   "scripts": {
     "test": "jest",
-    "start": "nodemon server.js",
-    "seed": "node seeds/index.js"
+    "start": "node server.js",
+    "seed": "node seeds/index.js",
+    "dev": "nodemon server.js"
   },
   "repository": {
     "type": "git",
