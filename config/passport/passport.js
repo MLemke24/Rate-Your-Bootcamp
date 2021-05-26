@@ -1,0 +1,1 @@
+const signUpUser = require('../../')

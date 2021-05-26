@@ -7,12 +7,6 @@ class Post extends Model {}
 // create fields/columns for Post model
 Post.init(
   {
-    id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      primaryKey: true,
-      autoIncrement: true,
-    },
     title: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -22,7 +16,7 @@ Post.init(
       allowNull: false,
     },
     deliverFormat: {
-      type: DataTypes.BOOLEAN,
+      type: DataTypes.STRING,
       allowNull: false,
     },
     length: {
@@ -30,7 +24,7 @@ Post.init(
       allowNull: false,
     },
     status: {
-      type: DataTypes.BOOLEAN,
+      type: DataTypes.STRING,
       allowNull: false,
     },
     price: {
@@ -38,7 +32,7 @@ Post.init(
       allowNull: false,
     },
     quality: {
-      type: DataTypes.BOOLEAN,
+      type: DataTypes.STRING,
       allowNull: false,
     },
     standardsMet: {
@@ -50,7 +44,7 @@ Post.init(
       allowNull: false,
     },
     overallRating: {
-      type: DataTypes.BOOLEAN,
+      type: DataTypes.INTEGER,
       allowNull: false,
     },
     review_comments: {

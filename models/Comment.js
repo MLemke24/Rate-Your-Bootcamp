@@ -7,12 +7,6 @@ class Comment extends Model {}
 Comment.init(
   {
     // THESE ARE THE COLUMNS
-    id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      primaryKey: true,
-      autoIncrement: true,
-    },
     comment_text: {
       type: DataTypes.STRING,
       allowNull: false,
