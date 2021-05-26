@@ -8,11 +8,16 @@
     </div>
     <div>
       <label for="post-bootcampName">Bootcamp Name</label>
-      <input id="post-bootcampName" name="post-bootcampName" />
+      <input type="text" id="post-bootcampName" name="post-bootcampName" />
     </div>
     <div>
       <label for="post-deliveryFormat">Delivery Format: In-Person, Online, or Hybrid</label>
-      <input id="post-deliveryFormat" name="post-deliveryFormat" />
+      <label for="In-Person">In-Person</label><br>
+      <input type="radio" id="In-Person" style="vertical-align: bottom;" name="post-deliveryFormat" value="In-Person"/>
+      <label for="Online">Online</label><br>
+      <input type="radio" id="Online" name="post-deliveryFormat" value="Online"/>
+      <label for="Hybrid">Hybrid</label><br>
+      <input type="radio" id="Hybrid" name="post-deliveryFormat" value="Hybrid"/>
     </div>
     <div>
       <label for="post-length">How many weeks was your Bootcamp?</label>
