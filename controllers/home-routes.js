@@ -1,7 +1,6 @@
 const router = require("express").Router();
 
 router.get("/", (req, res) => {
-  console.log("?????????????????????????????????????/")
   res.render("homepage");
 });
 
@@ -21,8 +20,12 @@ router.get("/homepage", (req, res) => {
   res.render("homepage");
 });
 
-router.get("/dashboard", (req, res) => {
-  res.render("dashboard");
+router.get('/dashboard', (req, res) => {
+  res.render('dashboard');
+});
+
+router.get('/login', (req, res) => {
+  res.render('login');
 });
 
 module.exports = router;
