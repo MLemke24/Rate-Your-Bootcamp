@@ -2,13 +2,14 @@ const router = require('express').Router();
 
 
 router.get('/', (req, res) => {
+console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
   var object = {
 
   name: 'nancy',
 
   }
     
-  res.render('home', object);
+  res.render('homepage', object);
   });
 
   router.get('/dashboard', (req, res) => {
