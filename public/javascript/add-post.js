@@ -1,4 +1,5 @@
 async function newFormHandler(event) {
+
     event.preventDefault();
   
     const title = document.querySelector('input[name="post-title"]').value;
@@ -10,7 +11,8 @@ async function newFormHandler(event) {
     const post_quality = document.querySelector('input[name="post-quality"]').value;
     const post_standardsMet = document.querySelector('input[name="post-standardsMet"]').value;
     const post_repeat = document.querySelector('input[name="post-repeat"]').value;
-    const post_overallRating = document.querySelector('input[name="post-overallRating"]').value;
+    var starRatingEl = document.getElementById('star-rating');
+    var starRating = new Starry(starRatingEl);
     const post_review_comments = document.querySelector('input[name="post-review_comments"]').value;
   
     console.log('adding post');
