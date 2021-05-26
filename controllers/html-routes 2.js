@@ -8,7 +8,7 @@ router.get('/', (req, res) => {
 
   }
     
-  res.render('homepage', object);
+  res.render('home', object);
   });
 
   router.get('/dashboard', (req, res) => {
