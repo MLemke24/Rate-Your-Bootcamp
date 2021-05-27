@@ -5,10 +5,10 @@
 }
 
 /*this styles our sites logo*/
-img.logo {
-  width: 100%;
-  margin: initial;
+.brand-logo img {
+  height: 62px;
 }
+ 
 
 /* this styles the hero image */
 .banner {
@@ -108,22 +108,18 @@ body {
 .nav-wrapper {
   background-color: black;
 }
-
 /* end navigation*/
 
 .row {
-  font-family: Arial, Helvetica, sans-serif;
   border: solid;
   display: flex;
-  width: 30%;
+  width: 60%;
   justify-content: center;
-  align-items: center; 
+   /* align-items: center; 
 }
-
 .column {
   padding: 10px;
 }
-
 #left {
   width: 15%;
 }
