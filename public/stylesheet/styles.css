@@ -109,7 +109,7 @@ body {
 }
 /* end navigation*/
 
-.row {
+.post {
   border: solid;
   display: flex;
   width: 60%;
