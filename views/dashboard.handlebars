@@ -71,17 +71,18 @@
       <button type="submit" class="btn">Create</button>
     </form>
   </section>
+</div>
 
 
-  <section>
-    <h2 class="your-posts">Your Posts</h2>
-    <ol>
+    <h2 style="margin-left: 600px;" class="your-posts">Your Posts</h2>
+ 
+    <ol  style="list-style-type: none"; class="post-list">
       {{#each posts as |post|}}
      <div>
         {{> post-info post}}
       </div>
       {{/each}}
     </ol>
-  </section>
-</div>
+
+
 <script src="/javascript/add-post.js" ></script>
