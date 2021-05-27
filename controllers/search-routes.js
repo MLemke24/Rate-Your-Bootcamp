@@ -1,3 +1,5 @@
+const router = require("express").Router();
+const { Post, User, Comment } = require("../models");
 router.get('/', (req, res) => {
     Post.findAll({
         order: [[ 'created_at', 'DESC']],
