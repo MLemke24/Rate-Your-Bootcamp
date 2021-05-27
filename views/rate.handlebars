@@ -1,27 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rate Your Bootcamp</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-    />
-    <link rel="stylesheet" href="../stylesheet/styles.css" />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <!-- begin nav-->
+<!-- begin nav-->
     <nav>
       <div class="nav-wrapper">
         <a href="/homepage" class="brand-logo left"
-          ><img src="./images/dev.png" width="30%" height="30%"
-        /></a>
+          ><img src="./images/dev.png"/></a>
         <ul class="right hide-on-med-and-down">
           <li>
             <a href="/search"
@@ -59,13 +40,13 @@
     <input type="password" id="password-login" />
   </div>
   <div>
-    <button type="submit">login</button>
+    <button type="submit" class="loginbtn">login</button>
   </div>
 </form>
 
 <form class="signup-form">
   <div>
-    <label for="username-signup">username:</label>
+    <label for="username-signup">create username:</label>
     <input type="text" id="username-signup" />
   </div>
   <div>
@@ -77,8 +58,17 @@
     <input type="password" id="password-signup" />
   </div>
   <div>
-    <button type="submit">signup</button>
+    <button type="submit" class="signupbtn">signup</button>
   </div>
 </form>
+
+ <!--begin footer-->
+<footer class="page-footer">
+  <center>
+          <div class="container">
+         © 2021 Copyright All Rights Reserved
+          </div>
+          </center>
+        </footer>  
 
 <script src="/javascript/login.js"></script>
