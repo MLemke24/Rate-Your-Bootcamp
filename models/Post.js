@@ -28,19 +28,19 @@ Post.init(
       allowNull: false,
     },
     price: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-    },
-    quality: {
       type: DataTypes.STRING,
       allowNull: false,
     },
+    quality: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
     standardsMet: {
-      type: DataTypes.BOOLEAN,
+      type: DataTypes.STRING,
       allowNull: false,
     },
     repeat: {
-      type: DataTypes.BOOLEAN,
+      type: DataTypes.STRING,
       allowNull: false,
     },
     overallRating: {
