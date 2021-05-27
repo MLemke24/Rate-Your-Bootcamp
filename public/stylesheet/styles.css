@@ -21,13 +21,13 @@ img.logo {
 
 .login-form {
   font-family: Arial, Helvetica, sans-serif;
-  width: 50%;
+  width: 30%;
   margin-left: 15px;
 }
 
 .search-results {
   font-family: Arial, Helvetica, sans-serif;
-  width: 50%;
+  width: 30%;
   margin-left: 15px;
   
 }
@@ -35,16 +35,18 @@ img.logo {
 .button {
   margin-top: 10px;
   margin-bottom: 10px; 
+  background-color:rgb(66, 197, 237);
 }
 
 .btn {
 margin-top: 10px;
 margin-bottom: 10px;
+background-color:rgb(66, 197, 237);
 }
 
 .signup-form {
   font-family: Arial, Helvetica, sans-serif;
-  width: 50%;
+  width: 30%;
   margin-left: 15px;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -55,3 +57,16 @@ h2 {
   font-size: 40px;
   color: rgb(66, 197, 237);
 }
+
+.loginbtn {
+  margin-top: 10px;
+  margin-bottom: 10px; 
+  background-color:rgb(66, 197, 237);
+}
+
+.signupbtn {
+  margin-top: 10px;
+  margin-bottom: 10px; 
+  background-color:rgb(66, 197, 237);
+}
+
