@@ -1,127 +1,87 @@
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rate Your Bootcamp</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-    />
-    <link rel="stylesheet" href="../stylesheet/styles.css" />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <!-- begin nav-->
-    <nav>
-      <div class="nav-wrapper">
-        <a href="/homepage" class="brand-logo left"><img
-            src="./images/dev.png"
-            width="30%"
-            height="30%"
-          /></a>
-        <ul class="right hide-on-med-and-down">
-          <li>
-            <a href="/search"><i class="material-icons right">search</i>Search
-              For Bootcamps</a>
-          </li>
-          <li>
-            <a href="/hire"><i class="material-icons right">verified_user</i>Hire
-              A Bootcamp Graduate</a>
-          </li>
-          <li>
-            <a href="/rate"><i class="material-icons right">star</i>Bootcamp
-              Reviews</a>
-          </li>
-        </ul>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rate Your Bootcamp</title>
+</head>
+
+<!-- begin nav-->
+<nav>
+  <div class="nav-wrapper">
+    <a href="/homepage" class="brand-logo left"><img src="./images/dev.png" width="30%" height="30%" /></a>
+    <ul class="right hide-on-med-and-down">
+      <li>
+        <a href="/search"><i class="material-icons right">search</i>Search
+          For Bootcamps</a>
+      </li>
+      <li>
+        <a href="/hire"><i class="material-icons right">verified_user</i>Hire
+          A Bootcamp Graduate</a>
+      </li>
+      <li>
+        <a href="/rate"><i class="material-icons right">star</i>Bootcamp
+          Reviews</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<!-- end nav -->
+<!-- begin banner image -->
+<div class="banner">
+  <img class="logo" height="100%" width="100%" src="./images/banner1.png" />
+</div>
+<!--end banner-->
+<div class="search-results">
+  <section>
+    <h2>Create New Post</h2>
+    <form id="new-post-form" class="new-post-form">
+      <div>
+        <label for="post-title">Review Title</label>
+        <input type="text" id="post-title" name="post-title" />
       </div>
-    </nav>
-    <!-- end nav -->
-    <!-- begin banner image -->
-    <div class="banner">
-      <img class="logo" height="100%" width="100%" src="./images/banner1.png" />
-    </div>
-    <!--end banner-->
-    <div class="search-results">
-      <section>
-        <h2>Create New Post</h2>
-        <form class="new-post-form">
-          <div>
-            <label for="post-title">Review Title</label>
-            <input type="text" id="post-title" name="post-title" />
-          </div>
-          <div>
-            <label for="post-bootcampName">Bootcamp Name</label>
-            <input
-              type="text"
-              id="post-bootcampName"
-              name="post-bootcampName"
-            />
-          </div>
-          <div>
-            <label for="post-deliveryFormat">Delivery Format: In-Person, Online,
-              or Hybrid</label>
-            <label for="In-Person">In-Person</label><br />
-            <input
-              type="radio"
-              id="In-Person"
-              style="vertical-align: bottom;"
-              name="post-deliveryFormat"
-              value="In-Person"
-            />
-            <label for="Online">Online</label><br />
-            <input
-              type="radio"
-              id="Online"
-              name="post-deliveryFormat"
-              value="Online"
-            />
-            <label for="Hybrid">Hybrid</label><br />
-            <input
-              type="radio"
-              id="Hybrid"
-              name="post-deliveryFormat"
-              value="Hybrid"
-            />
-          </div>
-          <div>
-            <label for="post-length">How many weeks was your Bootcamp?</label>
-            <input id="post-length" name="post-length" />
-          </div>
-          <div>
-            <label for="post-status">Full Time or Part Time</label>
-            <input id="post-status" name="post-status" />
-          </div>
-          <div>
-            <label for="post-price">Price</label>
-            <input id="post-price" name="post-price" />
-          </div>
-          <div>
-            <label for="post-quality">Quality</label>
-            <input id="post-quality" name="post-quality" />
-          </div>
-          <div>
-            <label for="post-standardsMet">Did it meet your expectations?</label>
-            <input id="post-standardsMet" name="post-standardsMet" />
-          </div>
-          <div>
-            <label for="post-repeat">Would you choose this Bootcamp again?</label>
-            <input id="post-repeat" name="post-repeat" />
-          </div>
-          <div>
-            <label for="post-overallRating">Overall rating</label>
-            <input id="post-overallRating" name="post-overallRating" />
-          </div>
-          <div>
-            <label for="post-review_comments">Additional Comments</label>
-            <input id="post-review_comments" name="post-review_comments" />
-          </div>
-          <button type="submit" class="btn">Create</button>
-        </form>
-      </section>
-    </div>
-  </body>
-</html>
+      <div>
+        <label for="post-bootcampName">Bootcamp Name</label>
+        <input type="text" id="post-bootcampName" name="post-bootcampName" />
+      </div>
+      <div>
+        <label for="post-deliveryFormat">Delivery Format: In-Person, Online,
+          or Hybrid</label>
+        <input type="text" id="post-deliveryFormat" name="post-deliveryFormat" />
+      </div>
+      <div>
+        <label for="post-length">How many weeks was your Bootcamp?</label>
+        <input id="post-length" name="post-length" />
+      </div>
+      <div>
+        <label for="post-price">Price</label>
+        <input id="post-price" name="post-price" />
+      </div>
+      <div>
+        <label for="post-repeat">Would you choose this Bootcamp again?</label>
+        <input id="post-repeat" name="post-repeat" />
+      </div>
+      <div>
+        <label for="post-overallRating">Overall rating</label>
+        <input id="post-overallRating" name="post-overallRating" />
+      </div>
+      <div>
+        <label for="post-review_comments">Additional Comments</label>
+        <input id="post-review_comments" name="post-review_comments" />
+      </div>
+      <button type="submit" class="btn">Create</button>
+    </form>
+  </section>
+
+
+  <section>
+    <h2 class="your-posts">Your Posts</h2>
+    <ol>
+      {{#each posts as |post|}}
+     <div>
+        {{> post-info post}}
+      </div>
+      {{/each}}
+    </ol>
+  </section>
+</div>
+<script src="/javascript/add-post.js" ></script>

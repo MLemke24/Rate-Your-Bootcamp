@@ -23,24 +23,12 @@ Post.init(
       type: DataTypes.INTEGER,
       allowNull: false,
     },
-    status: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
     price: {
       type: DataTypes.INTEGER,
       allowNull: false,
     },
-    quality: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    standardsMet: {
-      type: DataTypes.BOOLEAN,
-      allowNull: false,
-    },
     repeat: {
-      type: DataTypes.BOOLEAN,
+      type: DataTypes.STRING,
       allowNull: false,
     },
     overallRating: {
