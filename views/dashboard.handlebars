@@ -9,10 +9,10 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     />
     <link rel="stylesheet" href="../stylesheet/styles.css" />
+    <link rel="stylesheet" href="../stylesheet/form.css" />
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
+      rel="stylesheet"/>
   </head>
   <body>
     <!-- begin nav-->
@@ -55,45 +55,28 @@
           </div>
           <div>
             <label for="post-bootcampName">Bootcamp Name</label>
-            <input
-              type="text"
-              id="post-bootcampName"
-              name="post-bootcampName"
-            />
+            <input type="text" id="post-bootcampName" name="post-bootcampName"/>
           </div>
           <div>
-            <label for="post-deliveryFormat">Delivery Format: In-Person, Online,
-              or Hybrid</label>
-            <label for="In-Person">In-Person</label><br />
-            <input
-              type="radio"
-              id="In-Person"
-              style="vertical-align: bottom;"
-              name="post-deliveryFormat"
-              value="In-Person"
-            />
-            <label for="Online">Online</label><br />
-            <input
-              type="radio"
-              id="Online"
-              name="post-deliveryFormat"
-              value="Online"
-            />
-            <label for="Hybrid">Hybrid</label><br />
-            <input
-              type="radio"
-              id="Hybrid"
-              name="post-deliveryFormat"
-              value="Hybrid"
-            />
+            <label for="post-deliveryFormat">Delivery Format: In-Person, Online, or Hybrid</label>
+            <label for="in-person">In-Person</label><br />
+            <input type="radio" id="in-person" name="post-deliveryFormat" value="in-person"/>
+            <label for="online">Online</label><br />
+            <input type="radio" id="online" name="post-deliveryFormat" value="online"/>
+            <label for="hybrid">Hybrid</label><br />
+            <input type="radio" id="hybrid" name="post-deliveryFormat" value="hybrid"/>
           </div>
           <div>
             <label for="post-length">How many weeks was your Bootcamp?</label>
-            <input id="post-length" name="post-length" />
+            <label for="weeks">Number of Weeks (1-52):</label>
+            <input type="number" id="weeks" name="post-length" min="1" max="52">
           </div>
           <div>
-            <label for="post-status">Full Time or Part Time</label>
-            <input id="post-status" name="post-status" />
+            <label for="post-status">Was your bootcamp full time or part time?</label>
+            <label for="full-time">Full Time</label><br />
+            <input type="radio" id="full-time" name="post-status" value="full-time"/>
+            <label for="part-time">Part Time</label><br />
+            <input type="radio" id="part-time" name="post-status" value="part-time"/>
           </div>
           <div>
             <label for="post-price">Price</label>
@@ -101,79 +84,39 @@
           </div>
           <div>
             <label for="post-quality">Quality</label>
-            <input id="post-quality" name="post-quality" />
+            <form>
+            <label for="quality">Quality Rating (between 0 and 10):</label>
+            <input type="quality" id="quality" name="post-quality" min="0" max="10">
+            </form>
           </div>
           <div>
             <label for="post-standardsMet">Did it meet your expectations?</label>
-            <input id="post-standardsMet" name="post-standardsMet" />
+            <label for="yes-met">Yes</label><br />
+            <input type="radio" id="yes-met" name="post-standardsMet" value="yes-met"/>
+            <label for="no-met">No</label><br />
+            <input type="radio" id="no-met" name="post-standardsMet" value="no-met"/>
           </div>
           <div>
             <label for="post-repeat">Would you choose this Bootcamp again?</label>
-            <input id="post-repeat" name="post-repeat" />
+            <label for="yes-repeat">Yes</label><br />
+            <input type="radio" id="yes-repeat" name="post-deliveryFormat" value="yes-repeat"/>
+            <label for="no-repeat">No</label><br />
+            <input type="radio" id="no-repeat" name="post-deliveryFormat" value="no-repeat"/>
           </div>
           <div>
             <label for="post-overallRating">Overall rating</label>
-            <input id="post-overallRating" name="post-overallRating" />
+            <form>
+            <label for="rating">Overall Rating (between 1 and 10):</label>
+            <input type="range" id="rating" name="post-overallRating" min="0" max="10">
+            </form>
           </div>
           <div>
             <label for="post-review_comments">Additional Comments</label>
-            <input id="post-review_comments" name="post-review_comments" />
+            <input type="text" id="post-review_comments" name="post-review_comments" />
           </div>
           <button type="submit" class="btn">Create</button>
         </form>
       </section>
     </div>
-<<<<<<< HEAD
-    <div>
-      <label for="post-deliveryFormat">Delivery Format: In-Person, Online, or Hybrid</label>
-      <input checked="checked" type="radio"  name="post-deliveryFormat" id="in-person" value="in-person"/>
-      <label for="in-person">In-Person</label><br>
-      <input checked="checked" type="radio"  name="post-deliveryFormat" id="online" value="online"/>
-      <label for="online">Online</label><br>
-      <input checked="checked" type="radio"  name="post-deliveryFormat" id="hybrid" value="hybrid"/>
-      <label for="hybrid">Hybrid</label><br>
-    </div>
-    <div>
-      <label for="post-length">How many weeks was your Bootcamp?</label>
-      <input id="post-length" name="post-length" />
-    </div>
-        <div>
-      <label for="post-status">Full Time or Part Time</label>
-      <label for="full-time">Full Time</label><br>
-      <input type="radio" id="full-time" style="vertical-align: bottom" name="post-deliveryFormat" value="full-time"/>
-      <label for="part-time">Full Time</label><br>
-      <input type="radio" id="full-time" style="vertical-align: bottom" name="post-deliveryFormat" value="full-time"/>
-    </div>
-    <div>
-      <label for="post-price">Price</label>
-      <input id="post-price" name="post-price" />
-    </div>
-        <div>
-      <label for="post-quality">Quality</label>
-      <input id="post-quality" name="post-quality" />
-    </div>
-    <div>
-      <label for="post-standardsMet">Did it meet your expectations?</label>
-      <input id="post-standardsMet" name="post-standardsMet" />
-    </div>
-    <div>
-      <label for="post-repeat">Would you choose this Bootcamp again?</label>
-      <input id="post-repeat" name="post-repeat" />
-    </div>
-     <div>
-      <label for="post-overallRating">Overall rating</label>
-      <input id="post-overallRating" name="post-overallRating" />
-    </div>
-    <div>
-      <label for="post-review_comments">Additional Comments</label>
-      <input id="post-review_comments" name="post-review_comments" />
-    </div>
-    <button type="submit" class="btn">Create</button>
-  </form>
-</section>
-
-
-=======
   </body>
 </html>
->>>>>>> 72fc27ce46eecee3af06e31edba775e1ed9658b2
