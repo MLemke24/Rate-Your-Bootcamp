@@ -1,27 +1,9 @@
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rate Your Bootcamp</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-    />
-    <link rel="stylesheet" href="../stylesheet/styles.css" />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <!-- begin nav-->
+
+<!-- begin nav-->
     <nav>
       <div class="nav-wrapper">
         <a href="/homepage" class="brand-logo left"><img
             src="./images/dev.png"
-            width="30%"
-            height="30%"
           /></a>
         <ul class="right hide-on-med-and-down">
           <li>
@@ -29,8 +11,9 @@
               For Bootcamps</a>
           </li>
           <li>
-            <a href="/hire"><i class="material-icons right">verified_user</i>Hire
-              A Bootcamp Graduate</a>
+            <a href="/hire"><i
+                class="material-icons right"
+              >verified_user</i>Hire A Bootcamp Graduate</a>
           </li>
           <li>
             <a href="/rate"><i class="material-icons right">star</i>Bootcamp
@@ -47,7 +30,7 @@
     <!--end banner-->
     <div class="search-results">
       <section>
-        <h2>Create New Post</h2>
+        <h2>Create New Review</h2>
         <form class="new-post-form">
           <div>
             <label for="post-title">Review Title</label>
@@ -55,73 +38,56 @@
           </div>
           <div>
             <label for="post-bootcampName">Bootcamp Name</label>
-            <input
-              type="text"
-              id="post-bootcampName"
-              name="post-bootcampName"
-            />
+            <input type="text" id="post-bootcampName" name="post-bootcampName"/>
           </div>
           <div>
-            <label for="post-deliveryFormat">Delivery Format: In-Person, Online,
-              or Hybrid</label>
-            <label for="In-Person">In-Person</label><br />
-            <input
-              type="radio"
-              id="In-Person"
-              style="vertical-align: bottom;"
-              name="post-deliveryFormat"
-              value="In-Person"
-            />
-            <label for="Online">Online</label><br />
-            <input
-              type="radio"
-              id="Online"
-              name="post-deliveryFormat"
-              value="Online"
-            />
-            <label for="Hybrid">Hybrid</label><br />
-            <input
-              type="radio"
-              id="Hybrid"
-              name="post-deliveryFormat"
-              value="Hybrid"
-            />
+            <label for="post-deliveryFormat">Delivery Format: In-Person, Online, or Hybrid</label>
+            <input type="text" id="post-deliveryFormat" name="post-deliveryFormat"/>
           </div>
           <div>
             <label for="post-length">How many weeks was your Bootcamp?</label>
-            <input id="post-length" name="post-length" />
+            <label for="weeks">Number of Weeks (1-52):</label>
+            <input type="number" id="weeks" name="post-length" min="1" max="52">
           </div>
           <div>
-            <label for="post-status">Full Time or Part Time</label>
-            <input id="post-status" name="post-status" />
+            <label for="post-status">Was your bootcamp full time or part time?</label>
+            <input type="text" id="post-status" name="post-status"/>
           </div>
           <div>
             <label for="post-price">Price</label>
-            <input id="post-price" name="post-price" />
+            <input type="text" id="post-price" name="post-price" />
           </div>
           <div>
-            <label for="post-quality">Quality</label>
-            <input id="post-quality" name="post-quality" />
+            <label for="quality">Quality Rating (between 0 and 10):</label>
+            <input type="number" id="quality" name="post-quality" min="0" max="10">
           </div>
           <div>
             <label for="post-standardsMet">Did it meet your expectations?</label>
-            <input id="post-standardsMet" name="post-standardsMet" />
+            <input type="text" id="post-standardsMet" name="post-standardsMet" />
           </div>
           <div>
             <label for="post-repeat">Would you choose this Bootcamp again?</label>
-            <input id="post-repeat" name="post-repeat" />
+            <input type="text" id="post-repeat" name="post-repeat" />
           </div>
           <div>
-            <label for="post-overallRating">Overall rating</label>
-            <input id="post-overallRating" name="post-overallRating" />
+            <label for="rating">Overall Rating (between 1 and 10):</label>
+            <input type="number" id="rating" name="post-overallRating" min="0" max="10">
           </div>
           <div>
             <label for="post-review_comments">Additional Comments</label>
-            <input id="post-review_comments" name="post-review_comments" />
+            <input type="text" id="post-review_comments" name="post-review_comments" />
           </div>
           <button type="submit" class="btn">Create</button>
         </form>
       </section>
     </div>
-  </body>
+   <!--begin footer-->
+<footer class="page-footer">
+  <center>
+          <div class="container">
+         © 2021 Copyright All Rights Reserved
+          </div>
+          </center>
+        </footer>  
 </html>
+
