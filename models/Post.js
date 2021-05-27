@@ -1,18 +1,12 @@
-const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/connection');
+const { Model, DataTypes } = require("sequelize");
+const sequelize = require("../config/connection");
 
 // create our Post model
-class Post extends Model {};
+class Post extends Model {}
 
 // create fields/columns for Post model
 Post.init(
   {
-    id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      primaryKey: true,
-      autoIncrement: true,
-    },
     title: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -22,41 +16,29 @@ Post.init(
       allowNull: false,
     },
     deliverFormat: {
-      type: DataTypes.BOOLEAN,
+      type: DataTypes.STRING,
       allowNull: false,
     },
     length: {
       type: DataTypes.INTEGER,
       allowNull: false,
     },
-    status: {
-      type: DataTypes.BOOLEAN,
-      allowNull: false,
-    },
     price: {
       type: DataTypes.INTEGER,
       allowNull: false,
     },
-    quality: {
-      type: DataTypes.BOOLEAN,
-      allowNull: false,
-    },
-    standardsMet: {
-      type: DataTypes.BOOLEAN,
-      allowNull: false,
-    },
     repeat: {
-      type: DataTypes.BOOLEAN,
+      type: DataTypes.STRING,
       allowNull: false,
     },
     overallRating: {
-      type: DataTypes.BOOLEAN,
+      type: DataTypes.INTEGER,
       allowNull: false,
     },
     review_comments: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      },
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
@@ -69,7 +51,7 @@ Post.init(
     sequelize,
     freezeTableName: true,
     underscored: true,
-    modelName: 'post',
+    modelName: "post",
   }
 );
 

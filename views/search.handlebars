@@ -1,0 +1,54 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html lang="en">
+  <body>
+    <!-- begin nav-->
+=======
+<!-- begin nav-->
+>>>>>>> ed66043155f861a576317b4b99d2fda5d01a62f3
+    <nav>
+      <div class="nav-wrapper">
+        <a href="homepage" class="brand-logo left"
+          ><img src="./images/dev.png"/></a>
+        <ul class="right hide-on-med-and-down">
+          <li>
+            <a href="search"
+              ><i class="material-icons right">search</i>Search For Bootcamps</a
+            >
+          </li>
+          <li>
+            <a href="hire"
+              ><i class="material-icons right">verified_user</i>Hire A Bootcamp
+              Graduate</a
+            >
+          </li>
+          <li>
+            <a href="rate"
+              ><i class="material-icons right">star</i>Bootcamp Reviews</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- end nav -->
+    <!-- begin banner image -->
+    <div class="banner">
+      <img class="logo" height="100%" width="100%" src="./images/banner1.png" />
+    </div>
+    <!--end banner-->
+   <ol  style="list-style-type: none"; class="post-list">
+    {{#each posts as |post|}}
+    <li>
+        {{> post-info post }}
+    </li>
+    {{/each}}
+</ol>
+     <!--begin footer-->
+<footer class="page-footer">
+  <center>
+          <div class="container">
+         © 2021 Copyright All Rights Reserved
+          </div>
+          </center>
+        </footer>  
+   
