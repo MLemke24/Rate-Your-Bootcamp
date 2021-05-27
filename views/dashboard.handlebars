@@ -59,12 +59,7 @@
           </div>
           <div>
             <label for="post-deliveryFormat">Delivery Format: In-Person, Online, or Hybrid</label>
-            <label for="in-person">In-Person</label><br />
-            <input type="radio" id="in-person" name="post-deliveryFormat" value="in-person"/>
-            <label for="online">Online</label><br />
-            <input type="radio" id="online" name="post-deliveryFormat" value="online"/>
-            <label for="hybrid">Hybrid</label><br />
-            <input type="radio" id="hybrid" name="post-deliveryFormat" value="hybrid"/>
+            <input type="text" id="post-deliveryFormat" name="post-deliveryFormat"/>
           </div>
           <div>
             <label for="post-length">How many weeks was your Bootcamp?</label>
@@ -73,42 +68,27 @@
           </div>
           <div>
             <label for="post-status">Was your bootcamp full time or part time?</label>
-            <label for="full-time">Full Time</label><br />
-            <input type="radio" id="full-time" name="post-status" value="full-time"/>
-            <label for="part-time">Part Time</label><br />
-            <input type="radio" id="part-time" name="post-status" value="part-time"/>
+            <input type="text" id="post-status" name="post-status"/>
           </div>
           <div>
             <label for="post-price">Price</label>
-            <input id="post-price" name="post-price" />
+            <input type="text" id="post-price" name="post-price" />
           </div>
           <div>
-            <label for="post-quality">Quality</label>
-            <form>
             <label for="quality">Quality Rating (between 0 and 10):</label>
-            <input type="quality" id="quality" name="post-quality" min="0" max="10">
-            </form>
+            <input type="number" id="quality" name="post-quality" min="0" max="10">
           </div>
           <div>
             <label for="post-standardsMet">Did it meet your expectations?</label>
-            <label for="yes-met">Yes</label><br />
-            <input type="radio" id="yes-met" name="post-standardsMet" value="yes-met"/>
-            <label for="no-met">No</label><br />
-            <input type="radio" id="no-met" name="post-standardsMet" value="no-met"/>
+            <input type="text" id="post-standardsMet" name="post-standardsMet" />
           </div>
           <div>
             <label for="post-repeat">Would you choose this Bootcamp again?</label>
-            <label for="yes-repeat">Yes</label><br />
-            <input type="radio" id="yes-repeat" name="post-deliveryFormat" value="yes-repeat"/>
-            <label for="no-repeat">No</label><br />
-            <input type="radio" id="no-repeat" name="post-deliveryFormat" value="no-repeat"/>
+            <input type="text" id="post-repeat" name="post-repeat" />
           </div>
           <div>
-            <label for="post-overallRating">Overall rating</label>
-            <form>
             <label for="rating">Overall Rating (between 1 and 10):</label>
-            <input type="range" id="rating" name="post-overallRating" min="0" max="10">
-            </form>
+            <input type="number" id="rating" name="post-overallRating" min="0" max="10">
           </div>
           <div>
             <label for="post-review_comments">Additional Comments</label>
