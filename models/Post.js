@@ -23,14 +23,11 @@ Post.init(
       type: DataTypes.INTEGER,
       allowNull: false,
     },
-    status: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
     price: {
       type: DataTypes.STRING,
       allowNull: false,
     },
+<<<<<<< HEAD
     quality: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -39,6 +36,8 @@ Post.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+=======
+>>>>>>> 36c6614b6b3a996495e5553da8d844b37fd27b7c
     repeat: {
       type: DataTypes.STRING,
       allowNull: false,

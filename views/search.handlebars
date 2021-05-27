@@ -1,4 +1,11 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html lang="en">
+  <body>
+    <!-- begin nav-->
+=======
 <!-- begin nav-->
+>>>>>>> ed66043155f861a576317b4b99d2fda5d01a62f3
     <nav>
       <div class="nav-wrapper">
         <a href="homepage" class="brand-logo left"
@@ -29,9 +36,13 @@
       <img class="logo" height="100%" width="100%" src="./images/banner1.png" />
     </div>
     <!--end banner-->
-    <div class="container">
-      Results go here
-    </div>
+   <ol  style="list-style-type: none"; class="post-list">
+    {{#each posts as |post|}}
+    <li>
+        {{> post-info post }}
+    </li>
+    {{/each}}
+</ol>
      <!--begin footer-->
 <footer class="page-footer">
   <center>
