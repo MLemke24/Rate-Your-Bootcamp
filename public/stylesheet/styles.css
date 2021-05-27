@@ -4,6 +4,14 @@
   padding: 0;
 }
 
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+  
+
 /*this styles our sites logo*/
 img.logo {
   width: 100%;
@@ -84,4 +92,12 @@ h2 {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 20px;
   color: rgb(66, 197, 237);
+}
+
+.page-footer {
+  position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   text-align: center;
 }
