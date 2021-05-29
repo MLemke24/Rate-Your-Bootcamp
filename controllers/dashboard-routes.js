@@ -38,17 +38,36 @@ router.get('/', withAuth, (req, res) => {
       // serialize data before passing to template
       const posts = dbPostData.map(post => post.get({ plain: true }));
       res.render('dashboard', { posts, loggedIn: true });
+      //res.json(dbPostData);
     })
     .catch(err => {
       console.log(err);
       res.status(500).json(err);
-    });
+ 
+   });
 });
 
-router.get('/edit/:id', withAuth, (req, res) => {
-  Post.findOne({
+router.put('/edit/:title', withAuth, (req, res) => {
+  Post.update({
+    title: req.body.title,
+    bootcampName: req.body.bootcampName,
+    deliverFormat: req.body.deliverFormat,
+    length: req.body.length, 
+    price: req.body.price,
+    overallRating: req.body.overallRating,
+    review_comments: req.body.review_comments,
+    user_id: req.body.user_id
+  },
+   {
     where: {
-      id: req.params.id
+      title: req.params.title,
+      bootcampName: req.params.bootcampName,
+      deliverFormat: req.params.deliverFormat,
+      length: req.params.length, 
+      price: req.params.price,
+      overallRating: req.params.overallRating,
+      review_comments: req.params.review_comments,
+      user_id: req.params.user_id
     },
     attributes: [
       'title',
@@ -56,7 +75,6 @@ router.get('/edit/:id', withAuth, (req, res) => {
       'deliverFormat',
       'length',
       'price',
-      'standardsMet',
       'overallRating',
       'review_comments',
       'user_id'
@@ -84,6 +102,54 @@ router.get('/edit/:id', withAuth, (req, res) => {
 
       const post = dbPostData.get({ plain: true });
       res.render('edit-post', { post, loggedIn: true });
+      // res.json(post);
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
+
+
+router.get('/edit/:title', withAuth, (req, res) => {
+  Post.findOne({
+    where: {
+      title: req.params.title
+    },
+    attributes: [
+      'title',
+      'bootcampName',
+      'deliverFormat',
+      'length',
+      'price',
+      'overallRating',
+      'review_comments',
+      'user_id'
+    ],
+    include: [
+      {
+        model: Comment,
+        attributes: ['comment_text', 'post_id', 'user_id', 'created_at'],
+        include: {
+          model: User,
+          attributes: ['username']
+        }
+      },
+      {
+        model: User,
+        attributes: ['username']
+      }
+    ]
+  })
+    .then(dbPostData => {
+      if (!dbPostData) {
+        res.status(404).json({ message: 'No post found with this id' });
+        return;
+      }
+
+      const post = dbPostData.get({ plain: true });
+      res.render('edit-post', { post, loggedIn: true });
+      // res.json(post);
     })
     .catch(err => {
       console.log(err);

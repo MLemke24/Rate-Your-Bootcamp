@@ -19,7 +19,7 @@
           A Bootcamp Graduate</a>
       </li>
       <li>
-        <a href="/rate"><i class="material-icons right">star</i>Bootcamp
+        <a href="/review"><i class="material-icons right">star</i>Bootcamp
           Reviews</a>
       </li>
     </ul>
@@ -77,9 +77,9 @@
     <h2 class="your-posts">Your Posts</h2>
     <ol>
       {{#each posts as |post|}}
-     <a href="dashboard/edit/{{post.id}}" >
+     {{!-- <a href="dashboard/edit/{{post.id}}" > --}}
         {{> post-info post}}
-      </a>
+      {{!-- </a> --}}
       {{/each}}
     </ol>
   </section>
