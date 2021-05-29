@@ -27,17 +27,6 @@ Post.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-<<<<<<< HEAD
-    quality: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-    },
-    standardsMet: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-=======
->>>>>>> 36c6614b6b3a996495e5553da8d844b37fd27b7c
     repeat: {
       type: DataTypes.STRING,
       allowNull: false,

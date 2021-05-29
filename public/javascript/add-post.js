@@ -30,19 +30,11 @@ async function newFormHandler(event) {
       }
     });
   
-<<<<<<< HEAD
-    // if (response.ok) {
-    //   document.location.replace('/dashboard');
-    // } else {
-      alert(response);
-    // }
-=======
     if (response.ok) {
       document.location.replace('/dashboard');
     } else {
       alert(response);
     }
->>>>>>> 36c6614b6b3a996495e5553da8d844b37fd27b7c
   }
 
   

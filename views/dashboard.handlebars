@@ -77,9 +77,9 @@
     <h2 class="your-posts">Your Posts</h2>
     <ol>
       {{#each posts as |post|}}
-     <div>
+     <a href="dashboard/edit/{{post.id}}" >
         {{> post-info post}}
-      </div>
+      </a>
       {{/each}}
     </ol>
   </section>
