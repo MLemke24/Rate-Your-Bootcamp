@@ -8,22 +8,23 @@ async function newFormHandler(event) {
     const deliverFormat = document.querySelector('input[name="post-deliveryFormat"]').value;
     const length = document.querySelector('input[name="post-length"]').value;
     const price = document.querySelector('input[name="post-price"]').value;
-    const repeat = document.querySelector('input[name="post-repeat"]').value;
     const overallRating = document.querySelector('input[name="post-overallRating"]').value;
     const review_comments = document.querySelector('input[name="post-review_comments"]').value;
+    const id = window.location.toString().split('/')[
+      window.location.toString().split('/').length - 1
+  ];
   
     console.log('==========================================adding post');
 
-    const response = await fetch(`/api/posts`, {
-      method: 'POST',
+    const response = await fetch(`/dashboard/edit/${id}`, {
+      method: 'PUT',
       body: JSON.stringify({
-        //id, 
+        id,
         title,
         bootcampName,
         deliverFormat,
         length,
         price,
-        repeat,
         overallRating,
         review_comments
       }),
@@ -32,12 +33,12 @@ async function newFormHandler(event) {
       }
     });
   
-    if (response.ok) {
-      document.location.replace('/dashboard');
-    } else {
-      alert(response);
-    }
+    // if (response.ok) {
+    //   document.location.replace('/dashboard');
+    // } else {
+    //   //alert(response);
+    //   console.log("Failed Request")
+    // }
   }
 
-  
-  document.querySelector('.new-post-form').addEventListener('submit', newFormHandler);
+  document.querySelector('#edit-post-form').addEventListener('submit', newFormHandler);

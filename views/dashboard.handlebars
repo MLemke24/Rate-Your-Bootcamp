@@ -19,7 +19,7 @@
           A Bootcamp Graduate</a>
       </li>
       <li>
-        <a href="/rate"><i class="material-icons right">star</i>Bootcamp
+        <a href="/review"><i class="material-icons right">star</i>Bootcamp
           Reviews</a>
       </li>
     </ul>
@@ -35,6 +35,10 @@
   <section>
     <h2>Create New Post</h2>
     <form id="new-post-form" class="new-post-form">
+      {{!-- <div>
+        <label for="post-ID">Post ID</label>
+        <input type="text" id="post-id" name="post-id" />
+      </div> --}}
       <div>
         <label for="post-title">Review Title</label>
         <input type="text" id="post-title" name="post-title" />
@@ -77,11 +81,12 @@
     <h2 class="your-posts">Your Posts</h2>
     <ol>
       {{#each posts as |post|}}
-     <a href="dashboard/edit/{{post.id}}" >
+     {{!-- <a href="dashboard/edit/{{post.id}}" > --}}
         {{> post-info post}}
-      </a>
+      {{!-- </a> --}}
       {{/each}}
     </ol>
   </section>
 </div>
 <script src="/javascript/add-post.js" ></script>
+<script src="/javascript/delete-post.js"></script>

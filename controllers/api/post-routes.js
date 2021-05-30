@@ -4,7 +4,9 @@ const { Post, User, Comment } = require("../../models");
 router.get('/', (req, res) => {
     Post.findAll({
         order: [[ 'created_at', 'DESC']],
-        attributes: ['title',
+        attributes: [
+        'id',
+        'title',
         'bootcampName',
         'deliverFormat',
         'length',
@@ -42,7 +44,9 @@ router.get('/:id', (req, res) => {
         where: {
             id: req.params.id
         },
-        attributes: ['title',
+        attributes: [
+        'id',
+        'title',
         'bootcampName',
         'deliverFormat',
         'length',
@@ -78,6 +82,7 @@ router.get('/:id', (req, res) => {
 router.post('/', (req, res) => {
   console.log(req.body);
     Post.create({
+        id: req.body.id,
         title: req.body.title,
         bootcampName: req.body.bootcampName,
         deliverFormat: req.body.deliverFormat,
@@ -100,6 +105,7 @@ router.post('/', (req, res) => {
 router.put('/:id', (req, res) => {
   Post.update(
       {
+        id: req.body.id,
         title: req.body.title,
         bootcampName: req.body.bootcampName,
         deliverFormat: req.body.deliverFormat,
@@ -118,7 +124,7 @@ router.put('/:id', (req, res) => {
     )
       .then(dbPostData => {
         if (!dbPostData) {
-          res.status(404).json({ message: 'No post found with this id' });
+          res.status(404).json({ message: 'No post found with this id3' });
           return;
         }
         res.json(dbPostData);
@@ -138,7 +144,7 @@ router.delete('/:id', (req, res) => {
       })
       .then(dbPostData => {
         if (!dbPostData) {
-          res.status(404).json({ message: 'No post found with this id' });
+          res.status(404).json({ message: 'No post found with this id4' });
           return;
         }
         res.json(dbPostData);
@@ -150,4 +156,3 @@ router.delete('/:id', (req, res) => {
 })
 
 module.exports = router;
-
