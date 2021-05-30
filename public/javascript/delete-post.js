@@ -30,11 +30,11 @@ async function deleteFormHandler(event){
         }
       });
     
-      // if (response.ok) {
-      //   document.location.replace('/dashboard');
+      if (response.ok) {
+        document.location.render('/dashboard');
       // } else {
       //   alert(response.statusText);
-      // }
+    }
 }
 
 document.querySelector('.delete-post-btn').addEventListener('click', deleteFormHandler);

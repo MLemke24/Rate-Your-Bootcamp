@@ -154,5 +154,64 @@ router.get('/edit/:id', withAuth, (req, res) => {
     });
 });
 
+// DELETE a post 
+router.delete('/:id', (req, res) => {
+  Post.destroy({
+    id: req.body.id,
+    title: req.body.title,
+    bootcampName: req.body.bootcampName,
+    deliverFormat: req.body.deliverFormat,
+    length: req.body.length, 
+    price: req.body.price,
+    overallRating: req.body.overallRating,
+    review_comments: req.body.review_comments
+  },
+   {
+    where: {
+      id: req.body.id
+    },
+    attributes: [
+      'id',
+      'title',
+      'bootcampName',
+      'deliverFormat',
+      'length',
+      'price',
+      'overallRating',
+      'review_comments',
+      'user_id'
+    ],
+    include: [
+      {
+        model: Comment,
+        attributes: ['comment_text', 'post_id', 'user_id', 'created_at'],
+        include: {
+          model: User,
+          attributes: ['username']
+        }
+      },
+      {
+        model: User,
+        attributes: ['username']
+      }
+    ]
+  })
+  .then(dbPostData => {
+    if (!dbPostData) {
+      res.status(404).json({ message: 'No post found with this id4' });
+      return;
+    }
+
+    //const post = dbPostData.get({ plain: true });
+    //res.render('edit-post', { post, loggedIn: true });
+    // res.json(post);
+    res.status(200).redirect("/dashboard")
+  })
+  .catch(err => {
+    console.log(err);
+    res.status(500).json(err);
+  });
+});
+
 
 module.exports = router;
