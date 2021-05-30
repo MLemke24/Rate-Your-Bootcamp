@@ -57,20 +57,11 @@ router.put('/edit/:id', withAuth, (req, res) => {
     length: req.body.length, 
     price: req.body.price,
     overallRating: req.body.overallRating,
-    review_comments: req.body.review_comments,
-    user_id: req.body.user_id
+    review_comments: req.body.review_comments
   },
    {
     where: {
-      id: req.params.id,
-      title: req.params.title,
-      bootcampName: req.params.bootcampName,
-      deliverFormat: req.params.deliverFormat,
-      length: req.params.length, 
-      price: req.params.price,
-      overallRating: req.params.overallRating,
-      review_comments: req.params.review_comments,
-      user_id: req.params.user_id
+      id: req.body.id
     },
     attributes: [
       'id',
@@ -104,9 +95,10 @@ router.put('/edit/:id', withAuth, (req, res) => {
         return;
       }
 
-      const post = dbPostData.get({ plain: true });
-      res.render('edit-post', { post, loggedIn: true });
+      //const post = dbPostData.get({ plain: true });
+      //res.render('edit-post', { post, loggedIn: true });
       // res.json(post);
+      res.status(200).redirect("/dashboard")
     })
     .catch(err => {
       console.log(err);
