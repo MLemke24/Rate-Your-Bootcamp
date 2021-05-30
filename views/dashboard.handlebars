@@ -74,9 +74,9 @@
 
     <ol>
       {{#each posts as |post|}}
-     <div>
+     <a href="dashboard/edit/{{post.id}}" >
         {{> post-info post}}
-      </div>
+      </a>
       {{/each}}
     </ol>
  
