@@ -1,3 +1,33 @@
+<!-- begin nav-->
+<nav>
+  <div class="nav-wrapper">
+    <a href="/" class="brand-logo left"><img src="./images/dev.png" /></a>
+    <ul class="right hide-on-med-and-down">
+       {{#if loggedIn}}
+      <li>
+        <a id="logout" href="/"><i class="material-icons right">logout</i>Logout</a>
+      </li>
+      {{/if}}
+      <li>
+        <a href="/search"><i class="material-icons right">search</i>Search For Bootcamps</a>
+      </li>
+      <li>
+        <a href="/hire"><i class="material-icons right">verified_user</i>Hire A Bootcamp
+          Graduate</a>
+      </li>
+      <li>
+        <a href="/dashboard"><i class="material-icons right">star</i>Review A Bootcamp</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<!-- end nav -->
+<!-- begin banner image -->
+<div class="banner">
+  <img class="logo" height="100%" width="100%" src="./images/banner1.png" />
+</div>
+<!--end banner-->
+<!--begin login-->
 <form class="login-form">
   <div>
     <label for="email-login">email:</label>
@@ -8,13 +38,13 @@
     <input type="password" id="password-login" />
   </div>
   <div>
-    <button type="submit">login</button>
+    <button type="submit" class="loginbtn">login</button>
   </div>
 </form>
 
 <form class="signup-form">
   <div>
-    <label for="username-signup">username:</label>
+    <label for="username-signup">create username:</label>
     <input type="text" id="username-signup" />
   </div>
   <div>
@@ -26,8 +56,17 @@
     <input type="password" id="password-signup" />
   </div>
   <div>
-    <button type="submit">signup</button>
+    <button type="submit" class="signupbtn">signup</button>
   </div>
 </form>
+
+<!--begin footer-->
+<footer class="page-footer">
+  <center>
+    <div class="container">
+      © 2021 Copyright All Rights Reserved
+    </div>
+  </center>
+</footer>
 
 <script src="/javascript/login.js"></script>

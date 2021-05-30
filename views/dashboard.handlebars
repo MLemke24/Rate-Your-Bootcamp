@@ -8,8 +8,13 @@
 <!-- begin nav-->
 <nav>
   <div class="nav-wrapper">
-    <a href="/homepage" class="brand-logo left"><img src="./images/dev.png" width="30%" height="30%" /></a>
+    <a href="/" class="brand-logo left"><img src="./images/dev.png" width="30%" height="30%" /></a>
     <ul class="right hide-on-med-and-down">
+      {{#if loggedIn}}
+      <li>
+        <a id="logout" href="/"><i class="material-icons right">logout</i>Logout</a>
+      </li>
+      {{/if}}
       <li>
         <a href="/search"><i class="material-icons right">search</i>Search
           For Bootcamps</a>
@@ -19,8 +24,7 @@
           A Bootcamp Graduate</a>
       </li>
       <li>
-        <a href="/rate"><i class="material-icons right">star</i>Bootcamp
-          Reviews</a>
+        <a href="/dashboard"><i class="material-icons right">star</i>Review A Bootcamp</a>
       </li>
     </ul>
   </div>
@@ -72,17 +76,43 @@
     </form>
   </section>
 </div>
+<div>
+  <h2 style="display: flex; justify-content: center;" class="your-posts">Your Posts</h2>
+</div>
+<ol style="list-style-type: none" ; class="post-list">
+  {{#each posts as |post|}}
+  <div>
+    {{> post-info post}}
+  </div>
+  {{/each}}
+</ol>
 
+<section>
+  <h2>Upload Your Portfolio</h2>
 
-    <h2 style="margin-left: 600px;" class="your-posts">Your Posts</h2>
- 
-    <ol  style="list-style-type: none"; class="post-list">
-      {{#each posts as |post|}}
-     <div>
-        {{> post-info post}}
-      </div>
-      {{/each}}
-    </ol>
+  <form class="new-hire-form">
+    <div>
+      <label for="hire-title">Title</label>
+      <input type="text" id="hire-title" name="hire-title" />
+    </div>
+    <div>
+      <label for="hire-url">Link</label>
+      <input id="hire-url" name="hire-url" />
+    </div>
+    <button type="submit" class="btn">Create</button>
+  </form>
+</section>
+  <h2>Your Portfolio</h2>
+<ol class="hire">
+  {{#each hire as |hire|}}
+  <li>
+    {{> hire-info hire}}
+     <a href="/hire" id="hire-delete" class="hire-delete">Delete Portfolio</a>
+  </li>
+  {{/each}}
+</ol>
 
-
-<script src="/javascript/add-post.js" ></script>
+<script src="/javascript/logout.js"></script>
+<script src="/javascript/add-resume.js"></script>
+<script src="/javascript/add-post.js"></script>
+<script src="/javascript/delete-hire.js"></script>

@@ -1,10 +1,13 @@
 <!-- begin nav-->
 <nav>
   <div class="nav-wrapper">
-    <a href="/homepage" class="brand-logo left"><img
-        src="./images/dev.png"
-      /></a>
+    <a href="/" class="brand-logo left"><img src="./images/dev.png" /></a>
     <ul class="right hide-on-med-and-down">
+      {{#if loggedIn}}
+      <li>
+        <a id="logout" href="/"><i class="material-icons right">logout</i>Logout</a>
+      </li>
+      {{/if}}
       <li>
         <a href="/search"><i class="material-icons right">search</i>Search For
           Bootcamps</a>
@@ -14,7 +17,7 @@
           Bootcamp Graduate</a>
       </li>
       <li>
-        <a href="/rate"><i class="material-icons right">star</i>Bootcamp Reviews</a>
+        <a href="/dashboard"><i class="material-icons right">star</i>Review A Bootcamp</a>
       </li>
     </ul>
   </div>
@@ -41,6 +44,9 @@
   </div>
 </form>
 <!--endlogin-->
+
+<script src="/javascript/login.js"></script>
+<script src="/javascript/logout.js"></script>
 
 <!--begin footer-->
 <footer class="page-footer">
