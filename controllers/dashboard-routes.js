@@ -10,6 +10,7 @@ router.get('/', withAuth, (req, res) => {
       user_id: req.session.user_id
     },
     attributes: [
+      'id',
       'title',
       'bootcampName',
       'deliverFormat',
@@ -47,8 +48,9 @@ router.get('/', withAuth, (req, res) => {
    });
 });
 
-router.put('/edit/:title', withAuth, (req, res) => {
+router.put('/edit/:id', withAuth, (req, res) => {
   Post.update({
+    id: req.body.id,
     title: req.body.title,
     bootcampName: req.body.bootcampName,
     deliverFormat: req.body.deliverFormat,
@@ -60,6 +62,7 @@ router.put('/edit/:title', withAuth, (req, res) => {
   },
    {
     where: {
+      id: req.params.id,
       title: req.params.title,
       bootcampName: req.params.bootcampName,
       deliverFormat: req.params.deliverFormat,
@@ -70,6 +73,7 @@ router.put('/edit/:title', withAuth, (req, res) => {
       user_id: req.params.user_id
     },
     attributes: [
+      'id',
       'title',
       'bootcampName',
       'deliverFormat',
@@ -96,7 +100,7 @@ router.put('/edit/:title', withAuth, (req, res) => {
   })
     .then(dbPostData => {
       if (!dbPostData) {
-        res.status(404).json({ message: 'No post found with this id' });
+        res.status(404).json({ message: 'No post found with this id1' });
         return;
       }
 
@@ -111,12 +115,13 @@ router.put('/edit/:title', withAuth, (req, res) => {
 });
 
 
-router.get('/edit/:title', withAuth, (req, res) => {
+router.get('/edit/:id', withAuth, (req, res) => {
   Post.findOne({
     where: {
-      title: req.params.title
+      id: req.params.id
     },
     attributes: [
+      'id',
       'title',
       'bootcampName',
       'deliverFormat',
@@ -143,7 +148,7 @@ router.get('/edit/:title', withAuth, (req, res) => {
   })
     .then(dbPostData => {
       if (!dbPostData) {
-        res.status(404).json({ message: 'No post found with this id' });
+        res.status(404).json({ message: 'No post found with this id2' });
         return;
       }
 
