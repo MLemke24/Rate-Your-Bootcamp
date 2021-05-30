@@ -136,7 +136,7 @@ router.put('/:id', (req, res) => {
 })
 
 // DELETE a post 
-router.delete('/:id', (req, res) => {
+router.delete('/posts/:id', (req, res) => {
   Post.destroy({
       where: {
         id: req.params.id
