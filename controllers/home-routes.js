@@ -11,6 +11,10 @@ router.get("/search", (req, res) => {
   res.render("search");
 });
 
+router.get("/dashboard/edit", (req, res) => {
+  res.render('edit-post')
+});
+
 router.get('/login', (req, res) => {
   if (req.session.loggedIn) {
     res.redirect('/dashboard');

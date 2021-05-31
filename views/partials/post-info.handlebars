@@ -4,7 +4,7 @@
             <h3>Title:</h3>
             <h5>BC Name:</h5>
             <h5>Format:</h5>
-            <h5>Weeks:</h5>
+            <h5>Length:</h5>
             <h5>Price:</h5>
             <h5>Repeat:</h5>
             <h5>Rating: </h5>
@@ -20,7 +20,10 @@
                 <h5>{{repeat}}</h5>
                 <h5>{{overallRating}}</h5>
                 <h5>{{review_comments}}</h5>
-
+        <a href="dashboard/edit/{{id}}">
+        <button type="submit" id="edit-review" class="btn">Edit</button>
+        <button class="delete-post-btn btn" type="submit" >Delete Post</button>
+        </a>
             </div>
         </div>
     </div>
