@@ -6,7 +6,8 @@ router.get('/', (req, res) => {
     console.log('======================');
     Hire.findAll({
       order: [['created_at', 'DESC']], 
-      attributes: ['id',
+      attributes: [
+      'id',
       'title', 
       'post_url',
       'created_at' 

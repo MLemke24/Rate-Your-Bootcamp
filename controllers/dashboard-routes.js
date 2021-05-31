@@ -44,12 +44,12 @@ const promiseHire = Hire.findAll({
     }
   ]
   })
-
+console.log(promiseHire + '========================')
 Promise.all([ promisePost, promiseHire ])
     .then(data => {
         let posts = data[0];
         let hire = data[1];
-
+        console.log(hire)
        posts = data[0].map(post => post.get({ plain: true }));
        hire = data[1].map(hire => hire.get({ plain: true }));
       res.render('dashboard', { posts, hire, loggedIn: true });
