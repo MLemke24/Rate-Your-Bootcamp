@@ -12,12 +12,17 @@ Rate Your Bootcamp is a website that provides ratings and reviews of Web Develop
 
   - [Description](#description)
   - [Table of Contents](#table-of-contents)
+  - [Live Link](#live-link)
   - [Installation](#installation)
   - [Usage](#usage)
   - [License](#license)
   - [Contributing](#contributing)
   - [Tests](#tests)
   - [Questions](#questions)
+
+## Live Link
+
+Here is a link to a Live Demo: [https://rate-your-bootcamp.herokuapp.com/](https://rate-your-bootcamp.herokuapp.com/)
 
 ## Installation
 
