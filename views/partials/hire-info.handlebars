@@ -2,11 +2,12 @@
       <div class="title">
         <a href="{{post_url}}" target="_blank">{{title}}</a>
         <span>({{post_url}})</span>
-        <button value={{id}} href="/hire" id="hire-delete" class="hire-delete btn">Delete Portfolio</button>
+         <button value={{id}} href="/hire" id="hire-delete" class="hire-delete-btn btn">Delete Portfolio</button>
       </div>
       <div class="meta">
         by {{user.username}} on
         {{format_date created_at}}
-        
-      </div>
+     </div>
     </article>
+
+    <script src="/javascript/delete-hire.js"></script>

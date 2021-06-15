@@ -15,4 +15,4 @@ async function deletePortfolioHandler(event) {
     }
   }
   
-  document.querySelector('.hire-delete').addEventListener('click', deletePortfolioHandler);
+  document.querySelector('.delete-hire-btn').addEventListener('click', deletePortfolioHandler);
