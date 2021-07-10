@@ -66,7 +66,7 @@
       </div>
       <div>
         <label for="post-overallRating">Overall rating</label>
-        <input id="post-overallRating" name="post-overallRating" />
+        <input type="range" id="post-overallRating" name="post-overallRating" min="0" max="10">
       </div>
       <div>
         <label for="post-review_comments">Additional Comments</label>
@@ -83,6 +83,11 @@
   {{#each posts as |post|}}
   <div>
     {{> post-info post}}
+    <div class='dash-btns'>
+     <a href="dashboard/edit/{{id}}">
+        <button type="submit" id="edit-review" class="btn">Edit</button></a>
+        <button value={{id}} class="delete-post-btn btn" type="submit" >Delete Post</button>
+        </div>
   </div>
   {{/each}}
 </ol>
@@ -114,3 +119,4 @@
 <script src="/javascript/logout.js"></script>
 <script src="/javascript/add-resume.js"></script>
 <script src="/javascript/add-post.js"></script>
+<script src="/javascript/delete-post.js"></script>
